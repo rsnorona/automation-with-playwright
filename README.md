@@ -8,7 +8,7 @@ It is intended for practicing, developing, and validating test automation scenar
 
 ## Project Information
 
-- **Author:** Ricardo Norona  
-- **Language:** JavaScript  
-- **Framework:** Playwright  
-- **Test Type:** End-to-End (E2E) Testing  
+- **Author:** Ricardo Norona
+- **Language:** JavaScript
+- **Framework:** Playwright
+- **Test Type:** End-to-End (E2E) Testing

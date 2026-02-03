@@ -11,5 +11,15 @@
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "javascript": false,
+    "json": false
+  },
+  "github.copilot.inlineSuggest.enable": false,
+  "editor.inlineSuggest.enabled": false,
+  "editor.suggest.preview": false
 }

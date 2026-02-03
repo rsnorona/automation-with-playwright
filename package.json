@@ -1,0 +1,22 @@
+{
+  "name": "automation-with-playwright",
+  "version": "1.0.0",
+  "description": "Playwright end-to-end automation tests using JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-playwright:rsnorona/automation-with-playwright.git"
+  },
+  "keywords": [],
+  "author": "Ricardo Norona",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.58.1",
+    "@types/node": "^25.2.0"
+  }
+}

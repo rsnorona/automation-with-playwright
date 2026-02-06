@@ -25,6 +25,12 @@ class TodoPage {
     await this.newTodoInput.press('Enter');
   }
 
+  async removeTodo(text) {
+    const item = this.todoItems.filter({ hasText: text });
+    await item.hover();
+    await item.locator('button.destroy').click();
+  }
+
   todoLabel(text) {
     return this.page.getByText(text, { exact: true });
   }
@@ -36,6 +42,10 @@ class TodoPage {
 
   async filterCompleted() {
     await this.completedFilter.click();
+  }
+
+  async filterActive() {
+    await this.activeFilter.click();
   }
 }
 

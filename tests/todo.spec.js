@@ -1,6 +1,5 @@
 const { test, expect } = require('@playwright/test');
 const { TodoPage } = require('../pages/todo.page');
-const { todo } = require('node:test');
 
 test('TodoMVC: add todos, complete one, verify counts and completed filter', async ({
   page,
@@ -26,12 +25,20 @@ test('TodoMVC: add todos, complete one, verify counts and completed filter', asy
   // Complete one todo
   await todoPage.completeTodo('Take the dog out for a walk');
 
+  // Remove one todo
+  await todoPage.removeTodo('Buy milk');
+
   // Hard assertion: items left counter
-  await expect(todoPage.itemsLeftCounter).toContainText('2');
+  await expect(todoPage.itemsLeftCounter).toContainText('1');
 
   // Go to completed filter
   await todoPage.filterCompleted();
 
   // Hard assertion: completed item is visible in completed view
   await expect(todoPage.todoLabel('Take the dog out for a walk')).toBeVisible();
+
+  // Go to completed filter
+  await todoPage.filterActive();
+
+  await expect(todoPage.todoLabel('Clean the bathroom')).toBeVisible();
 });

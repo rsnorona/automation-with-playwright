@@ -33,7 +33,7 @@ export default defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-    headless: false,
+    headless: !!process.env.CI,
     viewport: { width: 1280, height: 720 },
     actionTimeout: 10_000,
     navigationTimeout: 30_000,
